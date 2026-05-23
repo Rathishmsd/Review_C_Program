@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+	
+	int ans=0;
+	int bal;
+	while(n!=0)
+	{
+	    bal = n%10;
+      if (ans > INT_MAX / 10 || ans < INT_MIN / 10)
+      {
+            printf("Overflow occurred\n");
+            return 0;
+      }
+	    ans = ans*10 + bal;
+	    n=n/10;
+	}
+	
+	printf("Reversed integer is %d",ans);
+	return 0;
+}
