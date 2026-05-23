@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int a=10,b=5;
+    
+    printf("Addition of two integers:%d\n",a+b);
+    printf("Subtraction of two integers:%d\n",a-b);
+    printf("Multiplication of two integers:%d\n",a*b);
+    
+    if(b!=0)
+    {
+        printf("Quotient of two integers:%d",a/b);
+    }
+
+    return 0;
+}
