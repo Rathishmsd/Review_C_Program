@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+float average(int *ptr,int size)
+{
+    int sum=0;
+    int *end= ptr+size;
+    
+    while(ptr<end)
+    {
+        sum = sum + *ptr;
+        ptr++;
+    }
+    
+    return (float)sum/size;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    
+    printf("Average:%.2f",average(a,n));
+
+    return 0;
+}
