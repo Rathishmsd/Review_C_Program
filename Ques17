@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+int firstoccur(char str[],char sub[])
+{
+    int j;
+    for(int i=0;str[i]!='\0';i++)
+    {
+        for(j=0;sub[j]!='\0';j++)
+        {
+            if(str[i+j]!=sub[j])
+            break;
+        }
+        if(sub[j]=='\0')
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+int main()
+{
+    char str[100];
+    printf("Enter the string:");
+    scanf("%s",str);
+    printf("Enter the substring");
+    char substr[100];
+    scanf("%s",substr);
+    
+    printf("First occurrence:%d",firstoccur(str,substr));
+
+    return 0;
+}
