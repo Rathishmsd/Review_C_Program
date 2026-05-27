@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+char swap(char **a,char **b)
+{
+    char *temp;
+    
+    temp=*a;
+    *a = *b;
+    *b = temp;
+}
+int main()
+{
+    char *s1 = malloc(20);
+    char *s2 = malloc(20);
+    
+    printf("String 1:");
+    scanf("%s",s1);
+    printf("String 2:");
+    scanf("%s",s2);
+    
+    swap(&s1,&s2);
+    
+    printf("After swap:\nString 1:%s\n",s1);
+    printf("String 2:%s",s2);
+
+    return 0;
+}
